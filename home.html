@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="logo.png" alt="Website Logo">
+
+        <nav class="navbar">
+            <a href="#">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="gallery.html">GALLERY</a>
+        </nav>
+    </header>
+
+    <section class="Home">
+        <div class="home-content">
+            <h1 class="neon">TAMAN BOTANI</h1>
+            <p class="neon">Kuching, Sarawak</p>
+            <div class="btn-box">
+                <a href="interview.html">MORE</a>
+            </div>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" autoplay loop muted>
+                <source src="music.mp3" type="audio/mp3">
+            </audio>
+            <div class="volume-control">
+                <img id="volume-icon" src="audio.png" alt="Volume Icon"/>
+                <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+    
+        <script>
+            const audio = document.getElementById('audio');
+            const volumeSlider = document.getElementById('volume-slider');
+            const volumeIcon = document.getElementById('volume-icon')
+    
+            audio.muted = false;
+            volumeSlider.value = 1;
+    
+            volumeIcon.addEventListener('click', function(){
+                if(audio.muted){
+                    audio.muted = false
+                    volumeIcon.src = 'audio.png'
+                } else{
+                    audio.muted = true;
+                    volumeIcon.src = 'audio.png';
+                }
+            });
+    
+            volumeSlider.addEventListener('input', function(){
+                audio.volume = volumeSlider.value;
+                if(audio.volume === 0){
+                    volumeIcon.src ='audio.png';
+                } else if(audio.volume < 0.5){
+                    volumeIcon.src = 'low-volume.png';
+                } else {
+                    volumeIcon.src = 'sound up.png';
+                }
+            });
+        </script>
+        <script src="script.js"></script> 
+    </div>
+        <div class="home-sci">
+            <a href="https://r.search.yahoo.com/_ylt=Awr1SnBVPxVnDQIA_C7jPwx.;_ylu=Y29sbwNzZzMEcG9zAzIEdnRpZAMEc2VjA3Ny/RV=2/RE=1730655318/RO=10/RU=https%3a%2f%2fwww.facebook.com%2fborneobotanical%2fabout_details%2f/RK=2/RS=GMFMZl9B0BsosNWP0aYDPkalaBA-"><i class='bx bxl-facebook'></i></a>
+            <a href="https://r.search.yahoo.com/_ylt=AwrKAzJ.PxVnOAIAzLPjPwx.;_ylu=Y29sbwNzZzMEcG9zAzMEdnRpZAMEc2VjA3Ny/RV=2/RE=1730655359/RO=10/RU=https%3a%2f%2fwww.instagram.com%2fexplore%2flocations%2f1351402388278387%2fsarawak-botanical-garden%2f/RK=2/RS=bH_77uVfu6yBCwahkcZWuLcIP88-"><i class='bx bxl-instagram'></i></a>
+            <a href="https://maps.app.goo.gl/TZpSkP3AajCFUkQx6"><i class='bx bx-map'></i></a>
+            <a href="https://forms.gle/f8tD4ugGSM5PuNJPA"><i class='bx bx-envelope'></i></a>
+        </div>
+    </section>
+</body>
+</html>

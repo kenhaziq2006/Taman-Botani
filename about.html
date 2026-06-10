@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Us Page</title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logo.png" alt="Website Logo">
+
+        <nav class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="gallery.html">GALLERY</a>
+        </nav>
+    </header>
+	<div class="about-sec">
+		<div class="about-img">
+			<img src="photo_6064275620889738588_w.jpg">
+		</div>
+		<div class="about-intro">
+			<h3>About Us<span style="color: plum;"> !</h3>
+			<p>Sarawak Botanical Garden is located in a very strategic location of 206.10 acres, which is within the area of the New Sarawak State Legislative Assembly, the Old Sarawak State Legislative Asembly, Wisma Bapa Malaysia, Fort Margherita and Pengkalan Sapi.</p>
+		</div>
+	</div>
+	<div class="audio-player">
+		<audio id="audio" autoplay loop muted>
+			<source src="music.mp3" type="audio/mp3">
+		</audio>
+		<div class="volume-control">
+			<img id="volume-icon" src="audio.png" alt="Volume Icon"/>
+			<input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1">
+		</div>
+	</div>
+
+	<script>
+		const audio = document.getElementById('audio');
+		const volumeSlider = document.getElementById('volume-slider');
+		const volumeIcon = document.getElementById('volume-icon')
+
+		audio.muted = false;
+		volumeSlider.value = 1;
+
+		volumeIcon.addEventListener('click', function(){
+			if(audio.muted){
+				audio.muted = false
+				volumeIcon.src = 'audio.png'
+			} else{
+				audio.muted = true;
+				volumeIcon.src = 'audio.png';
+			}
+		});
+
+		volumeSlider.addEventListener('input', function(){
+			audio.volume = volumeSlider.value;
+			if(audio.volume === 0){
+				volumeIcon.src = 'audio.png';
+			} else if(audio.volume < 0.5){
+				volumeIcon.src = 'low-volume.png';
+			} else {
+				volumeIcon.src = 'audio.png';
+			}
+		});
+	</script>
+
+</body>
+</html>

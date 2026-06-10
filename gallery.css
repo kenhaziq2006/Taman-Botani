@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+header img{
+  width: 75px;
+  height: 75px;
+}
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(photo_6060071165734535172_y.jpg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+}
+
+.logo {
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a{
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 35px;
+  transition: .3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar a:hover{
+  color: plum;
+}
+
+.audio-player{
+  display: flex;
+}
+.volume-control{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#volume-icon{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#volume-slider{
+  width: 100px;
+  display: none;
+  margin-left: 10px;
+}
+#volume-control:hover #volume-slider{
+  display: inline-block;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('photo_6060071165734535172_y.jpg');
+  background-color: linear-gradient(rgba(0,0,0,0.8));
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+.container .gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .gallery .img-box {
+  width: 80px;
+  height: 300px;
+  margin: 5px;
+  border: 4px solid rgb(0, 0, 0);
+  border-radius: 50px;
+  box-shadow: plum 0px 10px 20px -15px, plum 0px 5px 10px -15px;
+  background: url(photo_6059966617640618118_y.jpg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+  transition: width 0.4s;
+}
+.container .gallery .img-box h2 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  opacity: 0;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  padding: 2% 5%;
+  border-radius: 8px 0 0 8px;
+  transition: bottom 0.4s, opacity;
+}
+.container .gallery .img-box:nth-child(2) {
+  background: url(photo_6060071165734535163_y.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container .gallery .img-box:nth-child(3) {
+  background: url(photo_6060071165734535161_y.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container .gallery .img-box:nth-child(4) {
+  background: url(photo_6060071165734535173_y.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.container .gallery .img-box:hover {
+  width: 300px;
+}
+.container .gallery .img-box:hover h2 {
+  opacity: 1;
+  bottom: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .img-box {
+    height: 300px;
+  }
+  .img-box:hover {
+    width: 220px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.2rem !important;
+  }
+  h2 {
+    font-size: 0.9rem !important;
+  }
+  .img-box {
+    width: 50px !important;
+    height: 200px !important;
+    border-radius: 20px !important;
+  }
+  .img-box:hover {
+    width: 110px !important;
+  }
+}/*# sourceMappingURL=style.css.map */

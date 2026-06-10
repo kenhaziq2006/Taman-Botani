@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(photo_6060071165734535172_y.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+header img{
+    width: 75px;
+    height: 75px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 35px;
+    transition: .3s;
+
+}
+
+.navbar a:hover{
+    color: plum;
+}
+ 
+.neon {
+    color: #000000;
+    text-shadow: 0 0 5px plum, 0 0 10px plum, 0 0 15px plum;
+}
+
+.audio-player{
+    display: flex;
+}
+.volume-control{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#volume-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#volume-slider{
+    width: 100px;
+    display: none;
+    margin-left: 10px;
+}
+#volume-control:hover #volume-slider{
+    display: inline-block;
+}
+
+.Home {
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    height: 100vh;
+    background-image: linear-gradient(rgba(84, 83, 83, 0.763), rgba(18, 19, 44, 0.8)) url(photo_6060071165734535163_y.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    height: 8vh;
+    font-size: 65px;
+    color: white;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.home-content p {
+
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin: 20px 0 40px;
+    color: white;
+    position: center;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px;
+    width: 475px;
+    height: 50px;
+    position: center;
+
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: rgb(79, 74, 74);
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin-left: 90px;
+}
+
+.btn-box a:hover {
+    color: black;
+}
+
+.btn-box a:nth-child(2) {
+    color: plum;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: black;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #081b29;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: plum;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px  solid #000000;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: plum;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+
+}

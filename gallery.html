@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taman Botani Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+        <header class="header">
+            <img src="logo.png" alt="Website Logo">
+            <nav class="navbar">
+                <a href="home.html">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="#">GALLERY</a>
+            </nav>
+        </header>
+    <div class="container">
+        <h1>Taman Botani Gallery</h1>
+        <div class="gallery">
+            <div class="img-box">
+                <h2>1</h2>
+            </div>
+            <div class="img-box">
+                <h2>2</h2>
+            </div>
+            <div class="img-box">
+                <h2>3</h2>
+            </div>
+            <div class="img-box">
+                <h2>4</h2>
+            </div>
+            <div class="audio-player">
+                <audio id="audio" autoplay loop muted>
+                    <source src="music.mp3" type="audio/mp3">
+                </audio>
+                <div class="volume-control">
+                    <img id="volume-icon" src="audio.png" alt="Volume Icon"/>
+                    <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+        
+            <script>
+                const audio = document.getElementById('audio');
+                const volumeSlider = document.getElementById('volume-slider');
+                const volumeIcon = document.getElementById('volume-icon')
+        
+                audio.muted = false;
+                volumeSlider.value = 1;
+        
+                volumeIcon.addEventListener('click', function(){
+                    if(audio.muted){
+                        audio.muted = false
+                        volumeIcon.src = 'audio.png'
+                    } else{
+                        audio.muted = true;
+                        volumeIcon.src = 'audio.png';
+                    }
+                });
+        
+                volumeSlider.addEventListener('input', function(){
+                    audio.volume = volumeSlider.value;
+                    if(audio.volume === 0){
+                        volumeIcon.src = 'audio.png';
+                    } else if(audio.volume < 0.5){
+                        volumeIcon.src = 'low-volume.png';
+                    } else {
+                        volumeIcon.src = 'audio.png';
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
